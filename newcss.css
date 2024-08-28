@@ -1,0 +1,249 @@
+
+html, body {
+    height: 100%;
+}
+body, h1, h2, p, form {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('img4.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    opacity: 0.8;
+    color: #333;
+    transition: background-color 0.3s;
+    margin: 0; /* Remove default margin to make the background cover the entire page */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    background-color: #35495e;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: font-size 0.3s;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+    transition: font-size 0.3s;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+.search-section {
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.search-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: font-size 0.3s;
+}
+
+form input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+form input[type="text"]:focus {
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #35495e;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+
+
+.ads-container {
+    display: inline-block; /* Display ads in a row */
+    white-space: nowrap; /* Prevent ads from wrapping to the next line */
+    animation: scrollAds 20s linear infinite; /* Add horizontal scrolling animation */
+}
+
+.ads-section {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent ads from wrapping to the next line */
+}
+.ads-container {
+    display: inline-block; /* Display ads in a row */
+    white-space: nowrap; /* Prevent ads from wrapping to the next line */
+    animation: scrollAds 20s linear infinite; /* Add horizontal scrolling animation */
+}
+
+
+.ad {
+    width: 300px; /* Adjust the width of each ad as needed */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: inline-block; /* Display ads in a row */
+    margin-right: 20px; /* Add spacing between ads */
+}
+
+.ad:last-child {
+    margin-right: 0; /* Remove margin for the last ad */
+}
+
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.ad p {
+    padding: 10px;
+}
+
+@keyframes scrollAds {
+    0%, 33.33%, 66.67% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Translate ads container to the left */
+    }
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.ad p {
+    padding: 10px;
+}
+
+.features-section {
+    padding: 40px 0; /* Increased padding for more spacing */
+    text-align: center;
+    background-color: transparent; /* Make the background transparent */
+    font-family: 'Arial', sans-serif; /* Choose a suitable font */
+    position: relative; /* Position relative to allow z-index */
+    z-index: 1; /* Set a z-index to layer it above the background */
+}
+
+.feature {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Feature background with transparency */
+    border-radius: 10px; /* Rounded corners for the features */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for the features */
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Set a z-index to layer it above the background */
+}
+
+.feature:hover {
+    transform: scale(1.05); /* Enlarge the feature on hover */
+}
+
+.feature img {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;
+}
+
+.feature p {
+    margin-top: 10px;
+    font-size: 18px; /* Adjust the font size */
+    color: rgb(129, 129, 242)violet; /* Text color */
+}
+
+
+/* You can add more styles as needed to further enhance the appearance */
+
+/* Add a pseudo-element for the background image */
+
+
+/* Add a background image to the search button */
+.search-button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Set the background image and adjust its size and position */
+    background-image: url('loupe.png'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Adjust the size as needed */
+    background-position: center; /* Adjust the position as needed */
+    /* Add some left padding to make space for the icon */
+    padding-left: 40px; /* Adjust as needed based on the icon size */
+}
+
+/* On hover, you can change the background color to give feedback */
+.search-button:hover {
+    background-color: #0056b3;
+    animation: pulse 1s infinite;
+}
+.features-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: font-size 0.3s;
+    color: #fff; /* Change the text color to white */
+    background-color: rgba(0, 0, 0, 0.5); /* Add a semi-transparent black background */
+    padding: 10px 20px; /* Add padding for better readability */
+    border-radius: 5px; /* Rounded corners for the background */
+    display: inline-block; /* Make the background span the text width */
+}

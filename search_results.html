@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParkSpot Booking - Search Results</title>
+    <link rel="stylesheet" href="newcss.css">
+</head>
+<body>
+    <header>
+        <h1>FindmySpot</h1>
+        <p>Find and book parking spots near you!</p>
+    </header>
+    
+    <main>
+        <section class="search-results">
+            <h2>Search Results</h2>
+            
+            <?php
+            // Start a session to access the search results array
+            session_start();
+
+            // Check if search results exist in the session
+            if (isset($_SESSION["search_results"])) {
+                $searchResults = $_SESSION["search_results"];
+
+                // Loop through and display the search results
+                foreach ($searchResults as $result) {
+                    echo "<div class='result'>";
+                    echo "<h3>" . $result["SpotName"] . "</h3>";
+                    echo "<p>Location: " . $result["Location"] . "</p>";
+                    echo "<p>Price: $" . $result["Price"] . "</p>";
+                    // Add more details as needed
+                    echo "</div>";
+                }
+
+                // Clear the session variable
+                unset($_SESSION["search_results"]);
+            } else {
+                echo "<p>No results found.</p>";
+            }
+            ?>
+
+        </section>
+    </main>
+</body>
+</html>
